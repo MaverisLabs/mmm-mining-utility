@@ -16,7 +16,7 @@ int check_access(char access[41])
 	char input[2000];
 	printf("[!] Please enter the access code> ");
 	fflush(stdout);
-	scanf("%s", input);
+	fgets(input,2000,stdin);
 
 	if (strcmp(input, access) == 0)
 	{
@@ -62,7 +62,7 @@ int main(int argc, char* argv[])
 		printf("\n");
 		printf("[!] Insert your hash> ");
 		fflush(stdout);
-		scanf("%s",input);
+		fgets(input,512,stdin);
 		get_hash(input);
 	}
 	return 0;
